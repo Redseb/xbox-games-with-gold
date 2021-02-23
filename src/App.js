@@ -17,6 +17,8 @@ function App() {
         <p>Xbox Games With Gold are monthly free titles included in the Xbox Live Gold subscription. Users can claim games that are marked as available through Gold. Different regions may have different games available through the Gold programme - however users can simply login using that region’s Microsoft store and claim the game. This website shows every game available in each region through the Games with Gold programme.</p>
       </div>
       <div className="Footer">
+        <a href="https://www.mikozyz.dev">mikozyz.dev</a>
+        <a href="mailto:mikolajzyzanski@gmail.com">Contact Me</a>
       </div>
     </div>
   );

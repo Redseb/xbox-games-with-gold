@@ -3,8 +3,10 @@ import './App.css';
 const GameCard = ({ title, graphic, country, link }) => {
     return (
         <div className="GameCard">
-            <img src={graphic} alt={title} />
-            <p>{title} <br /> Available in {country}</p>
+            <a href={link}>
+                <img src={graphic} alt={title} />
+            </a>
+            <p>{title} <br /> Available in <a href={link}>{country}</a></p>
         </div>
     );
 }

@@ -1,48 +1,86 @@
-.App{
+html{
+  margin: 0;
   background-color: #032C02;
-  width: 100vw;
-  height: 100vh;
+
+}
+
+.App{
+  height: 100%;
+  margin: 0;
 }
 
 h1{
   color: #DFAC2A;
   text-align: center;
   margin: 0;
+  font-family: consolas;
 }
 p{
   color: white;
   line-height: 110%;
 }
 
-.Explanation{
-  border-radius: 10px;
-  border: 5px solid #DFAC2A;
-  margin: 5vw;
-  padding: 5px;
-  text-indent: 20px;
+a{
+  color: #DFAC2A;
 }
 
+
+
 .CurrentGames{
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.GameCard{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid black;
+.GameCard img:hover{
+  box-shadow: 20px 10px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 .GameCard img{
   align-self: center;
   height: 195px;
   width: 130px;
+  border-radius: 5px;
+  transition: box-shadow .3s;
 }
 
 .GameCard p{
+  margin-top: 0px;
   align-self: center;
   text-align: center;
 }
+
+.Explanation{
+  border-radius: 10px;
+  border: 5px solid #DFAC2A;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 20px 10px 15px rgba(0, 0, 0, 0.2);
+  background-color: #022401;
+}
+
+.Footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1100px){
+  .CurrentGames{
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .Explanation{
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+
 
