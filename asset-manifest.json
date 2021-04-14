@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/xbox-games-with-gold-front/static/css/main.17e59636.chunk.css",
-    "main.js": "/xbox-games-with-gold-front/static/js/main.06c55cfe.chunk.js",
-    "main.js.map": "/xbox-games-with-gold-front/static/js/main.06c55cfe.chunk.js.map",
+    "main.js": "/xbox-games-with-gold-front/static/js/main.0a63a791.chunk.js",
+    "main.js.map": "/xbox-games-with-gold-front/static/js/main.0a63a791.chunk.js.map",
     "runtime-main.js": "/xbox-games-with-gold-front/static/js/runtime-main.ca66fc8a.js",
     "runtime-main.js.map": "/xbox-games-with-gold-front/static/js/runtime-main.ca66fc8a.js.map",
     "static/js/2.adf8b1db.chunk.js": "/xbox-games-with-gold-front/static/js/2.adf8b1db.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ca66fc8a.js",
     "static/js/2.adf8b1db.chunk.js",
     "static/css/main.17e59636.chunk.css",
-    "static/js/main.06c55cfe.chunk.js"
+    "static/js/main.0a63a791.chunk.js"
   ]
 }
