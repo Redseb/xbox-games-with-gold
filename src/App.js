@@ -1,16 +1,31 @@
 import './App.css';
 import GameCard from "./GameCard"
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [games, setGames] = useState([]);
+  console.log(games);
+  useEffect(() => {
+    fetch('http://xbox-games-with-gold.herokuapp.com/')
+      .then(response => response.json())
+      .then(data => setGames(data));
+  }, [])
+  if (games.length === 0) {
+    return (
+      <div className="App">
+        <h1>Fetching Available Games...</h1>
+      </div>
+    );
+  }
+  const gameCards = [];
+  for (const [index, val] of games.entries()) {
+    gameCards.push(<GameCard key={index} title={val.name} graphic={val.image} availability={val.availability} link={val.link} />)
+  }
   return (
     <div className="App">
       <h1>Xbox Games With Gold</h1>
       <div className="CurrentGames">
-        <GameCard title='Resident Evil' graphic='https://store-images.s-microsoft.com/image/apps.39684.67692664087020494.db738e63-b6d5-4872-854d-74452f0cf9a7.e104a3ce-8f38-409a-a2b9-c9d1dc5b39e2' country='USA' link='https://www.microsoft.com/p/resident-evil/bnzqj2fbtdm7' />
-        <GameCard title='Resident Evil' graphic='https://store-images.s-microsoft.com/image/apps.39684.67692664087020494.db738e63-b6d5-4872-854d-74452f0cf9a7.e104a3ce-8f38-409a-a2b9-c9d1dc5b39e2' country='USA' link='https://www.microsoft.com/p/resident-evil/bnzqj2fbtdm7' />
-        <GameCard title='Resident Evil' graphic='https://store-images.s-microsoft.com/image/apps.39684.67692664087020494.db738e63-b6d5-4872-854d-74452f0cf9a7.e104a3ce-8f38-409a-a2b9-c9d1dc5b39e2' country='USA' link='https://www.microsoft.com/p/resident-evil/bnzqj2fbtdm7' />
-        <GameCard title='Resident Evil' graphic='https://store-images.s-microsoft.com/image/apps.39684.67692664087020494.db738e63-b6d5-4872-854d-74452f0cf9a7.e104a3ce-8f38-409a-a2b9-c9d1dc5b39e2' country='USA' link='https://www.microsoft.com/p/resident-evil/bnzqj2fbtdm7' />
-
+        {gameCards}
       </div>
       <div className="Explanation">
         <h1>How Does This Work?</h1>

@@ -1,12 +1,12 @@
 import './App.css';
 
-const GameCard = ({ title, graphic, country, link }) => {
+const GameCard = ({ title, graphic, availability, link }) => {
     return (
         <div className="GameCard">
             <a href={link}>
                 <img src={graphic} alt={title} />
             </a>
-            <p>{title} <br /> Available in <a href={link}>{country}</a></p>
+            <p><a href={link}>{title}</a><br /> Available {availability}</p>
         </div>
     );
 }

@@ -51,6 +51,7 @@ a{
   margin-top: 0px;
   align-self: center;
   text-align: center;
+  max-width: 130px;
 }
 
 .Explanation{
@@ -74,8 +75,8 @@ a{
 
 @media only screen and (min-width: 1100px){
   .CurrentGames{
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
   .Explanation{
     margin-left: 20vw;
