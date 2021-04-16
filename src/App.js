@@ -6,9 +6,9 @@ function App() {
   const [games, setGames] = useState([]);
   console.log(games);
   useEffect(() => {
-    fetch('http://xbox-games-with-gold.herokuapp.com/')
+    fetch('https://xbox-games-with-gold.herokuapp.com/')
       .then(response => response.json())
-      .then(data => setGames(data));
+      .then(data => setGames(Object.values(data)));
   }, [])
   if (games.length === 0) {
     return (
